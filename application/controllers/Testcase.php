@@ -39,7 +39,19 @@ class Testcase extends CI_Controller {
 		$data['home_sqf']		=	'123';
 		$data['date_added']		=	time();
 
-		$id 	=	$this->lead_model->insert_array('leads',$data);
+		
+		if((strlen($data['first_name'])<= 0) || (strlen($data['last_name'])<=0) || (strlen($data['email_address'])<= 0) || (strlen($data['phone_number'])<= 0) || (strlen($data['address'])<= 0)){
+
+			echo "Status: <span style='color:red; font-weight:bold;font-size:20px;'>Failed</span>";
+		  	echo "</br>";	
+			  echo "<p><strong>Error:</strong>All fields are required</p>";
+			  
+			  exit;
+
+		}else{
+
+if (filter_var(trim($data['email_address']), FILTER_VALIDATE_EMAIL)) {
+		  $id 	=	$this->lead_model->insert_array('leads',$data);
 		echo "<p style='color:blue; font-weight:bold;font-size:20px;'>Test Case For Lead Insertion</p>";
 
 		if($id>0){
@@ -50,6 +62,10 @@ class Testcase extends CI_Controller {
 			echo "</br>";
 			echo "<p><strong>First Name</strong>= Test</p>";
 			echo "</br>";
+
+			echo "<p><strong>First Name</strong>= Test last</p>";
+			echo "</br>";
+
 			echo "<p><strong>Email Address</strong>= testcase@gmail.com</p>";
 			echo "</br>";
 			echo "<p><strong>Phone Number</strong>= 123456789</p>";
@@ -63,12 +79,30 @@ class Testcase extends CI_Controller {
 			$this->lead_model->delete_where(array('id'=>$id),'leads');
 
 		}else{
-			echo "Status: <span style='color:red; font-weight:bold;font-size:20px;'>Passed</span>";
-			echo "</br>";
-			echo "<p><strong>Error:</strong>Database are not configure properly</p>";
+
+			 echo "Status: <span style='color:red; font-weight:bold;font-size:20px;'>Failed</span>";
+		  	echo "</br>";	
+			  echo "<p><strong>Error:</strong>Database not configure correctly</p>";
+			  
+			  exit;
+		}
+
+		}
+		else {
+		  echo "Status: <span style='color:red; font-weight:bold;font-size:20px;'>Failed</span>";
+		  echo "</br>";	
+		  echo "<p><strong>Error:</strong>Invalid email address</p>";
+		  
+		  exit;
+		}
+
 
 		}
 
+
+		
+
+		
 		exit;
 	}
 
