@@ -12,7 +12,9 @@ Step 3: Change database name ,username and password from application/config/data
 
 Step 4: Change the config['base_url'] with url domain address from application/config/config.php
 
-Step 5: For listing of lead the URL is yourdomain/lead/lead_listing
+Step 5: For Testing the URL is yourdomain/testcase
+
+Step 6: For listing of lead the URL is yourdomain/lead/lead_listing
 
 
 
