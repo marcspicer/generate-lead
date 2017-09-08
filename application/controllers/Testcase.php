@@ -40,6 +40,7 @@ class Testcase extends CI_Controller {
 		$data['date_added']		=	time();
 
 		$id 	=	$this->lead_model->insert_array('leads',$data);
+		echo "<p style='color:blue; font-weight:bold;font-size:20px;'>Test Case For Lead Insertion</p>";
 
 		if($id>0){
 
