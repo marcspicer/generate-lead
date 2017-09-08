@@ -12,13 +12,13 @@
     <title>Lead Generation</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url()?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url()?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url()?>js/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="<?php echo base_url()?>vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>js/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url()?>css/sb-admin.css" rel="stylesheet">
@@ -91,15 +91,15 @@
       <!-- /.container-fluid -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url()?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url()?>vendor/popper/popper.min.js"></script>
-    <script src="<?php echo base_url()?>vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>js/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url()?>js/popper/popper.min.js"></script>
+    <script src="<?php echo base_url()?>js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="<?php echo base_url()?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url()?>js/jquery-easing/jquery.easing.min.js"></script>
     
-    <script src="<?php echo base_url()?>vendor/datatables/jquery.dataTables.js"></script>
-    <script src="<?php echo base_url()?>vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="<?php echo base_url()?>js/datatables/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url()?>js/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url()?>js/sb-admin.js"></script>
