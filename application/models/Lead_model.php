@@ -32,6 +32,12 @@ class Lead_model extends  CI_Model {
 		$this->db->insert( $table,$data );
 		return $this->db->insert_id();	
 	}
+
+	function delete_where($where,$tbl_name)
+	{
+		$this->db->where($where);
+		$this->db->delete($tbl_name);
+	}
 	
 			
 }
